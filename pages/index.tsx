@@ -2,6 +2,7 @@ import Head from "next/head";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
+import About from "./About";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,6 +25,7 @@ export default function Home() {
       </Head>
       <main className={classes.root}>
         <Navbar />
+        <About />
       </main>
     </div>
   );

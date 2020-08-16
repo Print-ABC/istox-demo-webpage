@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     width: "100%",
   },
+  navbar: {
+    backgroundColor: theme.palette.common.white,
+    padding: theme.spacing(1, 2)
+  },
   btnBase: {
     height: 25,
     textAlign: "left",
@@ -84,10 +88,12 @@ const Navbar: React.FC = (props) => {
 
   return (
     <Box className={classes.root}>
-      {buttons.map((btn) => (
-        <NavBtn key={btn.text} text={btn.text} link={btn.link} />
-      ))}
-      <ContactBtn text="Contact Us" link="#contact" />
+      <Box className={classes.navbar}>
+        {buttons.map((btn) => (
+          <NavBtn key={btn.text} text={btn.text} link={btn.link} />
+        ))}
+        <ContactBtn text="Contact Us" link="#contact" />
+      </Box>
     </Box>
   );
 };
