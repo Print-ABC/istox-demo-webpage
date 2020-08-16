@@ -1,6 +1,7 @@
 import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import { Box, Container, Divider, Typography } from "@material-ui/core";
+import { Box, Button, Container, Divider, Typography } from "@material-ui/core";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,6 +25,14 @@ const useStyles = makeStyles((theme) => ({
     border: "5px solid #F92524",
     opacity: 1,
     marginTop: 10,
+  },
+  joinBtn: {
+    backgroundColor: "#F92524",
+    color: theme.palette.common.white,
+    fontWeight: 200,
+    textTransform: "capitalize",
+    marginTop: 20,
+    padding: theme.spacing(1, 4),
   },
   image: {
     width: 350,
@@ -51,6 +60,9 @@ const Top: React.FC = (props) => {
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab illo inventore architecto beatae vitae dicta sunt explicabo.
         </Typography>
+        <Button endIcon={<ArrowRightAltIcon />} className={classes.joinBtn}>
+          Join Today
+        </Button>
       </Box>
       <img
         src="bg_gym_girl_bottle.png"
