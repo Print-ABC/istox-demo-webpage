@@ -10,14 +10,13 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(8, 0),
   },
   content: {
-    width: "100%",
-    marginRight: 10,
-    "& > .MuiBox-root": {
-      width: 520,
-      float: "right",
-      "& > .MuiTypography-root": {
-        marginTop: 15,
-      },
+    width: 520,
+    float: "right",
+    "& > .MuiTypography-root": {
+      marginTop: 15,
+    },
+    [theme.breakpoints.up("md")]: {
+      marginLeft: 235,
     },
   },
   divider: {
@@ -42,18 +41,16 @@ const Top: React.FC = (props) => {
   return (
     <Container maxWidth="xl" id="home" className={classes.root}>
       <Box className={classes.content}>
-        <Box>
-          <Typography variant="h4">Build Your Body &amp;</Typography>
-          <Typography variant="h2" style={{ fontWeight: 600 }}>
-            Shape Yourself!
-          </Typography>
-          <Divider className={classes.divider} />
-          <Typography style={{ color: "#7A839E" }}>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore architecto beatae vitae dicta sunt explicabo.
-          </Typography>
-        </Box>
+        <Typography variant="h4">Build Your Body &amp;</Typography>
+        <Typography variant="h2" style={{ fontWeight: 600 }}>
+          Shape Yourself!
+        </Typography>
+        <Divider className={classes.divider} />
+        <Typography style={{ color: "#7A839E" }}>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore architecto beatae vitae dicta sunt explicabo.
+        </Typography>
       </Box>
       <img
         src="bg_gym_girl_bottle.png"
