@@ -6,6 +6,7 @@ import Top from "./Top";
 import About from "./About";
 import Class from "./Class"
 import Trainers from "./Trainers"
+import Pricing from "./Pricing"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,6 +33,7 @@ export default function Home() {
         <About />
         <Class />
         <Trainers />
+        <Pricing />
       </main>
     </div>
   );
