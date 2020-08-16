@@ -75,7 +75,7 @@ const Feature = (props) => {
         <Icon className={classes.iconBox}>{children}</Icon>
       </Grid>
       <Grid item xs={12} md={10}>
-        <Typography variant="h5">{header}</Typography>
+        <h2>{header}</h2>
         <Typography style={{ color: "#7A839E" }}>{description}</Typography>
       </Grid>
     </Grid>
