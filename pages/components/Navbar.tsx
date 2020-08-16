@@ -6,14 +6,22 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "sticky",
     top: 0,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
     backgroundColor: theme.palette.common.white,
   },
+  logoBox: {
+    display: "flex",
+    alignItems: "center",
+  },
   navbar: {
+    width: "100%",
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
-    justifyContent: "flex-end",
-    padding: theme.spacing(1, 2)
+    justifyContent: "space-around",
+    padding: theme.spacing(1, 2),
   },
   btnBase: {
     height: 25,
@@ -22,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 0.54,
     color: theme.palette.common.black,
     opacity: 1,
-    marginRight: 50,
     "&:hover": {
       border: `2px solid ${theme.palette.grey[400]}`,
     },
@@ -87,6 +94,10 @@ const Navbar: React.FC = (props) => {
 
   return (
     <Box className={classes.root}>
+      <Box className={classes.logoBox}>
+        <img src="logo.png" alt="power logo" />
+        <h1 style={{ marginLeft: 20 }}>POWER</h1>
+      </Box>
       <Box className={classes.navbar}>
         {buttons.map((btn) => (
           <NavBtn key={btn.text} text={btn.text} link={btn.link} />

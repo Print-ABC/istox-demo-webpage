@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     "& > .MuiBox-root": {
       padding: theme.spacing(0, 20),
       [theme.breakpoints.up("lg")]:{
-        padding: "0px 235px",
+        padding: "0px 200px",
       },
     },
   },
