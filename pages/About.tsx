@@ -1,6 +1,6 @@
 import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import { Box, Icon, Typography, Grid, Divider } from "@material-ui/core";
+import { Box, Icon, Divider, Grid, Typography } from "@material-ui/core";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import SecurityIcon from "@material-ui/icons/Security";
@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
     },
     "& > .MuiTypography-root": {
       color: "#7A839E",
-      marginTop: 20,
+      marginBottom: 10,
     },
   },
-  icon: {
+  iconGrid: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -37,10 +37,19 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "50%",
     color: "#F92524",
     opacity: 1,
-    padding: 40,
+    padding: 30,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+  },
+  image: {
+    width: 350,
+    height: 500,
+    marginRight: 20,
+    [theme.breakpoints.up("lg")]: {
+      width: 450,
+      height: 642,
+    },
   },
 }));
 
@@ -49,19 +58,19 @@ const features = [
     header: "Open Door Policy",
     description:
       "Trem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi vitae dicta sunt explicabo sequi nesciunt.",
-    icon: <DirectionsWalkIcon style={{ fontSize: 50 }} />,
+    icon: <DirectionsWalkIcon fontSize="large" />,
   },
   {
     header: "Fully Insured",
     description:
       "Trem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi vitae dicta sunt explicabo sequi nesciunt.",
-    icon: <SecurityIcon style={{ fontSize: 40 }} />,
+    icon: <SecurityIcon fontSize="large" />,
   },
   {
     header: "Personal Trainer",
     description:
       "Trem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi vitae dicta sunt explicabo sequi nesciunt.",
-    icon: <PersonOutlineIcon style={{ fontSize: 50 }} />,
+    icon: <PersonOutlineIcon fontSize="large" />,
   },
 ];
 
@@ -70,12 +79,12 @@ const Feature = (props) => {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={3} style={{ marginTop: 50 }}>
-      <Grid item xs={12} md={2} className={classes.icon}>
+    <Grid container spacing={3}>
+      <Grid item xs={12} md={2} className={classes.iconGrid}>
         <Icon className={classes.iconBox}>{children}</Icon>
       </Grid>
       <Grid item xs={12} md={10}>
-        <h2>{header}</h2>
+        <h2 style={{ marginTop: 0 }}>{header}</h2>
         <Typography style={{ color: "#7A839E" }}>{description}</Typography>
       </Grid>
     </Grid>
@@ -88,11 +97,17 @@ const About: React.FC = (props) => {
 
   return (
     <Box className={classes.root} id="about">
-      <img src="bg_preparing_run.png" alt="" />
+      <Box style={{ height: "100%" }}>
+        <img
+          src="bg_preparing_run.png"
+          alt="sprint pose"
+          className={classes.image}
+        />
+      </Box>
       <Box className={classes.content}>
         <Box className={classes.storyBox}>
           <h1>Our Story</h1>
-          <Divider />
+          <Divider style={{ marginBottom: 20 }} />
           <Typography>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa

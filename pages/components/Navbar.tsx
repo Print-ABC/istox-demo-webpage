@@ -4,16 +4,15 @@ import { Box, Button, ButtonBase, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    position: "sticky",
+    top: 0,
+    backgroundColor: theme.palette.common.white,
+  },
+  navbar: {
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "flex-end",
-    position: "sticky",
-    top: 0,
-    width: "100%",
-  },
-  navbar: {
-    backgroundColor: theme.palette.common.white,
     padding: theme.spacing(1, 2)
   },
   btnBase: {
