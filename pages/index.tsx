@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Top from "./Top";
 import About from "./About";
 import Class from "./Class"
+import Trainers from "./Trainers"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,6 +31,7 @@ export default function Home() {
         <Top />
         <About />
         <Class />
+        <Trainers />
       </main>
     </div>
   );

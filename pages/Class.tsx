@@ -97,6 +97,7 @@ const Class: React.FC = (props) => {
       <Box className={classes.cardBox}>
         {schedules.map((schedule) => (
             <ScheduleCard
+            key={schedule.title}
             imgSrc={schedule.image}
             imgTitle={schedule.alt}
             title={schedule.title}
