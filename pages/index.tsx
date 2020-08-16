@@ -7,6 +7,7 @@ import About from "./About";
 import Class from "./Class"
 import Trainers from "./Trainers"
 import Pricing from "./Pricing"
+import Contact from "./Contact"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,6 +35,7 @@ export default function Home() {
         <Class />
         <Trainers />
         <Pricing />
+        <Contact />
       </main>
     </div>
   );
