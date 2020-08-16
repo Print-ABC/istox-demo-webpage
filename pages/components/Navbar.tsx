@@ -95,7 +95,7 @@ const Navbar: React.FC = (props) => {
   return (
     <Box className={classes.root}>
       <Box className={classes.logoBox}>
-        <img src="logo.png" alt="power logo" />
+        <img src="logo.png" alt="logo" />
         <h1 style={{ marginLeft: 20 }}>POWER</h1>
       </Box>
       <Box className={classes.navbar}>
